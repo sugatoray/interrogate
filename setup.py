@@ -63,6 +63,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Rust",
     "Topic :: Software Development :: Documentation",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Software Development :: Quality Assurance",
@@ -74,6 +75,8 @@ INSTALL_REQUIRES = [
     "py",
     "tabulate",
     "tomli; python_version < '3.11'",
+    "maturin",
+    "pyo3",
 ]
 EXTRAS_REQUIRE = {
     "png": ["cairosvg"],

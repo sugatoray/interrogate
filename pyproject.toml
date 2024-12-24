@@ -5,7 +5,6 @@ build-backend = "setuptools.build_meta"
 [tool.check-wheel-contents]
 toplevel = ["interrogate"]
 
-
 [tool.pytest.ini_options]
 addopts = ["-ra", "--strict-markers", "--strict-config"]
 testpaths = "tests"
@@ -55,3 +54,13 @@ color = true
 strict = true
 pretty = true
 ignore_missing_imports = true
+
+[tool.ruff]
+select = ["E", "F", "C", "N", "Q", "B", "A"]
+ignore = ["W503", "E203"]
+target-version = "py38"
+line-length = 79
+
+[dependencies]
+pyo3 = { version = "0.15", features = ["extension-module"] }
+maturin = "0.12"

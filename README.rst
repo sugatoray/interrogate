@@ -616,6 +616,32 @@ To view all options available, run ``interrogate --help``:
       -c, --config FILE               Read configuration from `pyproject.toml` or
                                       `setup.cfg`.
 
+Ruff Integration
+================
+
+To use `interrogate` with `Ruff`, a linter for Python, follow these steps:
+
+1. Ensure you have `Ruff` installed. You can install it via pip:
+
+.. code-block:: console
+
+    $ pip install ruff
+
+2. Update your `pyproject.toml` to include the `Ruff` configuration:
+
+.. code-block:: toml
+
+    [tool.ruff]
+    select = ["E", "F", "C", "N", "Q", "B", "A"]
+    ignore = ["W503", "E203"]
+    target-version = "py38"
+    line-length = 79
+
+3. Run `Ruff` to lint your code:
+
+.. code-block:: console
+
+    $ ruff check .
 
 .. start-uses-this
 
